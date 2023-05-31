@@ -240,7 +240,7 @@ margin-top: 100%;
     position: relative;
     display: block;
     margin: 0 5%;
-    height: 30vh;
+    
   }
 
   .full-nav {
@@ -252,7 +252,7 @@ margin-top: 100%;
   }
 
   .socials {
-    margin-top: 5%;
+    margin-top: 50%;
   }
   /* #landing-wrap {
     height: 50vh;
