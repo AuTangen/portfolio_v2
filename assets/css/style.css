@@ -66,6 +66,11 @@ body {
   color: rgb(83, 111, 121);
 }
 
+.line1 {
+  display: flex;
+  justify-content: space-between;
+}
+
 #landing-wrap {
   position: fixed;
   height: 90vh;
@@ -86,16 +91,23 @@ body {
   color:gold
 }
 
-nav {
-  margin-top: 10%;
+.full-nav {
+  list-style: none;
   display: flex;
   flex-direction: column;
 }
 
-a{
-  margin-top: 5%;
+.full-nav li {
+  margin-top: 10%;
+}
+
+a {
   color: white;
   text-decoration: none;
+}
+
+#menu-btn {
+  display: none;
 }
 
 i {
@@ -117,7 +129,13 @@ i {
 }
 
 .bio-wrap p:last-child{
-  margin-bottom: 20%;
+  margin-bottom: 5%;
+}
+
+.profile-container {
+  width: 120%;
+  overflow: hidden;
+
 }
 
 #profile-pic {
@@ -126,7 +144,6 @@ i {
   mix-blend-mode:screen;
   position: relative;
   border:solid rgb(161, 216, 189) 5px;
- 
 }
 
 #profile-pic:hover {
@@ -142,6 +159,27 @@ margin-top: 100%;
 .socials i {
   opacity: 75%;
   margin-right: 5%;
+}
+
+.proficiencies {
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+.proficiencies ul {
+  margin-right: 15%;
+  list-style:none;
+  
+}
+
+.proficiencies ul li::before {
+  content: "\2023";
+  color:rgb(161, 216, 189);
+  font-weight: bold; 
+  /* font-size: 120% */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; 
 }
 
 /* #profile-pic::after {
@@ -161,6 +199,15 @@ margin-top: 100%;
   border-radius: 2px;
 }
 
+
+.project-wrap {
+  border-radius: 7px;
+}
+
+.project-wrap:hover {
+  background-color: rgb(66, 89, 97);
+}
+
 .project-container:last-child {
   margin-bottom: 20%;
 }
@@ -178,12 +225,11 @@ margin-top: 100%;
   padding: 0 5%
 }
 
-.project-container:hover {
-  background-color: rgb(66, 89, 97);
+
+.img-wrap {
+  border-radius: 5px;
+  
 }
-
-
-
 
 
 .img-wrap img {
@@ -294,11 +340,11 @@ margin-top: 100%;
 
   #mobilenavbody {
 
-    background-color: rgb(223, 80, 36)
+    background-color: rgb(66, 89, 97);
   }
 
   #mobilenavbody ul li a {
-    color: var(--text-color);
+    color:white;
   }
 
   .offcanvas-header h3 {

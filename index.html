@@ -5,13 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Austen Tangen</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/vlu4fca.css">
 
   <script src="https://kit.fontawesome.com/6f05b4e923.js" crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
 
 
@@ -19,35 +21,69 @@
 
 <body>
 
-  <div class="cursor"></div>
-  <div class="cursor"></div>
+
 
   <section class='section-left'>
-    
+
     <div class="greeting" id="landing-wrap">
       <!-- <h1 id="hi">Hi</h1> -->
-      <h1>I'm Austen </h1>
+      <div class="line1">
+
+        <h1>I'm Austen </h1>
+        <nav class="navbar">
+          <button id="menu-btn" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header" id="mobilenavbody">
+              <div>
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Austen Tangen</h5>
+                <div class="underline"></div>
+                <h3>Front-End Web Developer</h3>
+                <div class="underline"></div>
+              </div>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body" id="mobilenavbody">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 padd">
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#about-me">About</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#projects"  data-toggle="collapse" data-target=".navbar-collapse">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
       <h2>I used to make <span id="beer">beer</span></h2>
       <h2>now I make things for the internet</h2>
 
-      <div>
-        <nav class="full-nav">
+
+      <ul class="full-nav">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
 
-          <a href="#about">About Me</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
 
 
-        </nav>
-
-        
-      </div>
 
       <div class="socials">
-        <a href="#"><i id="linkedin" class="fab fa-linkedin-in fa-2xl"></i></a>
-        <a href="#"><i id="github" class="fa-brands fa-github fa-2xl"></i></a>
-        <a href="#"><i id="instagram" class="fa-brands fa-instagram fa-2xl"></i></a>
+        <a href="https://www.linkedin.com/in/autangen94" target="_blank"><i id="linkedin" class="fab fa-linkedin-in fa-2xl"></i></a>
+        <a href="https://github.com/AuTangen" target="_blank"><i id="github" class="fa-brands fa-github fa-2xl"></i></a>
+        <a href="https://www.instagram.com/the.sten/?hl=en" target="_blank"><i id="instagram" class="fa-brands fa-instagram fa-2xl"></i></a>
+        <a href="mailto: atangen2406@gmail.com"><i id="email" class="fa-regular fa-envelope fa-2xl"></i></a>
 
       </div>
     </div>
@@ -61,110 +97,132 @@
   <section class="section-right">
     <section id="about">
       <h2>About</h2>
+
+
+
       <div class='bio-wrap'>
-        <!-- <div class="image-container"> -->
         <img id="profile-pic" src="./assets/images/IMG_4088.PNG" alt="profile pic">
-      <!-- </div> -->
         <div class='biotitle-wrap'>
-          
+
           <h5 class='titlesub'>former brewer - turned web developer</h5>
         </div>
         <div class='p-container'>
-          <p>I first started coding back in 2013, modding/scripting video game scenarios for my friends and I to play. I
+          <p>My interest in coding began many years ago, scripting video game scenarios for my friends and I to play. I
             became deeply infatuated with the idea of giving life to these lines of seemlingly spiritless syntax - to
             create something that is able to be felt and experienced. </p>
-          <p>I've carried this passion to create in everything I do. For me, there is no greater sense of accomplishment
+          <p>Life has taken many twists and turns since then, but I've carried this passion to create in everything I
+            do. For me, there is no greater sense of accomplishment
             than seeing others find joy in the experiences you've curated.</p>
-          <p>Most recently, this desire to deliver *adjective* user experiences has led me to the world of Web
+          <p>Most recently, this desire to deliver engaging user experiences has led me to the world of Web
             Development. I've just completed the Full Stack Coding Bootcamp through Rutgers University and am seeking to
             further expand my skillset and help build accessable, inclusive web applications</p>
         </div>
-        <h3>View Full Resume'</h3>
+        <h3>Here are some technologies I've been working with recently</h3>
+        <div class="proficiencies">
+          <ul>
+            <li>Javascript</li>
+            <li>Node.js</li>
+            <li>React</li>
+          </ul>
+
+          <ul>
+            <li>Sequelize</li>
+            <li>Mongoose</li>
+            <li>GraphQL</li>
+          </ul>
+        </div>
+        <a href="https://docs.google.com/document/d/14WovQiOqvbw0aw2aDekKrEp7zPk5jm47Of7rJRUyX_U/edit?usp=sharing"
+          target="_blank">
+          <h3>View Full Résumé</h3>
+        </a>
       </div>
-      
+
     </section>
     <section id="projects" class='portfolio-container'>
 
       <h2>Projects</h2>
-      <div class='project-container'>
-        <div class="img-wrap">
-          <a href="https://evening-everglades-03167.herokuapp.com/" target="_blank"><img src='./assets/images/jate.png'
-              alt="jate text editor" width="150" height="100"></img></a>
-        </div>
-        <div class='descr-container'>
-          <div>
-            <h3>Just Another Text Editor</h3>
+      <div class="project-wrap">
+        <div class='project-container'>
+          <div class="img-wrap">
+            <a href="https://evening-everglades-03167.herokuapp.com/" target="_blank"><img
+                src='./assets/images/jate.png' alt="jate text editor" width="150" height="100" id="jate"></img></a>
+          </div>
+          <div class='descr-container'>
+            <div>
+              <h3>Just Another Text Editor</h3>
 
-            <p>A text editor app that can be installed to your desktop</p>
+              <p>A text editor app that can be installed to your desktop</p>
+              <div class="tech-div">
+                <p>Javascript</p>
+                <p>Express</p>
+                <p>Webpack</p>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="project-wrap">
+        <div class='project-container'>
+          <div class="img-wrap">
+            <a href="https://github.com/AuTangen/09_README_generator" target="_blank"><img
+                src='./assets/images/readmegen.png' alt="readme generator" width="150" height="100"></img></a>
+          </div>
+          <div class='descr-container'>
+
+            <h3>README Generator</h3>
+
+            <p>A command-line app that generates MKD documentation</p>
             <div class="tech-div">
               <p>Javascript</p>
-              <p>Express</p>
-              <p>Webpack</p>
+              <p>NodeJS</p>
+              <p>Jest</p>
 
             </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class='project-container'>
-        <div class="img-wrap">
-          <a href="https://github.com/AuTangen/09_README_generator" target="_blank"><img
-              src='./assets/images/readmegen.png' alt="readme generator" width="150" height="100"></img></a>
-        </div>
-        <div class='descr-container'>
-
-          <h3>README Generator</h3>
-
-          <p>A command-line app that generates MKD documentation</p>
-          <div class="tech-div">
-            <p>Javascript</p>
-            <p>NodeJS</p>
-            <p>Jest</p>
 
           </div>
-
-
         </div>
       </div>
+      <div class="project-wrap">
+        <div class='project-container' id="notetaker-container">
+          <div class="img-wrap">
+            <a href="https://warm-basin-11114.herokuapp.com/" target="_blank"><img id="notetaker"
+                src='./assets/images/notetaker.png' alt="note taker app" width="150" height="100"></img></a>
+          </div>
+          <div class='descr-container'>
+            <div>
+              <h3>Note Taker App</h3>
 
-      <div class='project-container'>
-        <div class="img-wrap">
-          <a href="https://warm-basin-11114.herokuapp.com/" target="_blank"><img src='./assets/images/notetaker.png'
-              alt="note taker app" width="150" height="100"></img></a>
-        </div>
-        <div class='descr-container'>
-          <div>
-            <h3>Note Taker App</h3>
+              <p>A simple app to store notes and reminders</p>
+              <div class="tech-div">
+                <p>Javascript</p>
+                <p>Express</p>
+                <p>Webpack</p>
 
-            <p>A simple app to store notes and reminders</p>
-            <div class="tech-div">
-              <p>Javascript</p>
-              <p>Express</p>
-              <p>Webpack</p>
-
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
-
     </section>
-    <section  id="contact">
+    <section id="contact">
       <h2>Contact</h2>
-    <p class='titlesub'>former brewer - turned web developer</p>
-    </div>
-    <div class='p-container'>
-      <p>Lorem ipsum dolor sit amet, partem indoctum rationibus per ea, pro impetus scripserit id. Ea enim ullamcorper
-        consequuntur vel. Vis suavitate maiestatis in, eam inimicus theophrastus no, dicunt habemus assueverit eum et.
-        Ei probo virtute cum, epicuri euripidis omittantur vix te. Vero autem scriptorem an vix.</p>
-      <p>Cu commodo propriae menandri sit. No cetero civibus quo, ex sed bonorum vivendum. Cu qui omnes congue. Quo id
-        errem eripuit neglegentur, ei vix probo expetendis, senserit definitionem no eum. Pri tota quas et, ea nam solum
-        latine, magna minim ignota eam ne.</p>
-    </div>
-    </div>
-  </section>
+      <p class='titlesub'>former brewer - turned web developer</p>
+      </div>
+      <div class='p-container'>
+        <p>Lorem ipsum dolor sit amet, partem indoctum rationibus per ea, pro impetus scripserit id. Ea enim ullamcorper
+          consequuntur vel. Vis suavitate maiestatis in, eam inimicus theophrastus no, dicunt habemus assueverit eum et.
+          Ei probo virtute cum, epicuri euripidis omittantur vix te. Vero autem scriptorem an vix.</p>
+        <p>Cu commodo propriae menandri sit. No cetero civibus quo, ex sed bonorum vivendum. Cu qui omnes congue. Quo id
+          errem eripuit neglegentur, ei vix probo expetendis, senserit definitionem no eum. Pri tota quas et, ea nam
+          solum
+          latine, magna minim ignota eam ne.</p>
+      </div>
+      </div>
+    </section>
 
 
   </section>
