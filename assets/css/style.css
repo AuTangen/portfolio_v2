@@ -264,7 +264,18 @@ font-style: italic;
  
 }
 
+.code {
+width: fit-content;
+ background-color:rgb(94, 126, 138);
+ color:rgb(255, 255, 255);
+ border-radius: 8px;
+ margin-right: 2%;
+ padding: 2% 4%;
+}
 
+.code:hover {
+  background-color:var(--back-color) ;
+}
 
 
 .zoom {
