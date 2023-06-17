@@ -145,11 +145,11 @@
     <section id="projects" class='portfolio-container'>
 
       <h2 class="section-title">Projects</h2>
-      <a href="https://evening-everglades-03167.herokuapp.com/" target="_blank">
+      <a href="https://codepadtxt-1d14f4396365.herokuapp.com/" target="_blank">
         <div class="project-wrap">
           <div class='project-container'>
             <div class="img-wrap">
-              <a href="https://evening-everglades-03167.herokuapp.com/" target="_blank"><img
+              <a href="https://codepadtxt-1d14f4396365.herokuapp.com/" target="_blank"><img
                   src='./assets/images/jate.png' alt="codepad text editor" width="150" height="100" id="jate"></img></a>
             </div>
             <div class='descr-container'>
@@ -237,11 +237,15 @@
 
 
 
-      <form method="post" action="contact-form.php">
+      <form method="POST" action="https://formsubmit.co/atangen2406@gmail.com">
         <h3>Let's get in touch</h3>
-        <input id="Name" name="Name" type='text' placeholder='Name' required></input>
-        <input id="Email" name="Email" type='email' placeholder='Email' required></input>
-        <textarea id="Message" name="Message" type='text' placeholder='What&#39;s up?' required></textarea>
+        <!-- honeypot -->
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_captcha" value="false">
+        <!--  -->
+        <input id="Name" name="name" type='text' placeholder='Name'></input>
+        <input id="Email" name="email" type='email' placeholder='Email'></input>
+        <textarea id="Message" name="message" type='text' placeholder='What&#39;s up?'></textarea>
         <button type="submit">Send</button>
       </form>
 
@@ -250,14 +254,9 @@
 
 
   </section>
-  <!-- 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
-        crossorigin="anonymous">
-</script> -->
-
+ 
   <script src="assets/js/script.js"></script>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  
 </body>
 
 </html>
