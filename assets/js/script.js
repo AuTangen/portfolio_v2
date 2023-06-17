@@ -80,13 +80,6 @@ resume.addEventListener('mouseleave', function () {
     
 // -------------------Zoom--------------------------------------
 
-// profilePic.addEventListener('mouseenter', function (e) {
-//     jate.classList.add('zoom');
-// });
-// profilePic.addEventListener('mouseleave', function () {
-//     profilePic.classList.remove('zoom');
-// });
-
 
 jateContainer.addEventListener('mouseenter', function (e) {
     jate.classList.add('zoom');
@@ -104,18 +97,17 @@ noteContainer.addEventListener('mouseleave', function () {
     jate.classList.remove('zoom');
 });
 
-// ---------------------------
-// function sendEmail() {
-//     Email.send({
-//         Host : "smtp.gmail.com",
-//         Username : "atangen2406@gmail.com",
-//         Password : "password",
-//         To : 'atangen2406@gmail@gmail.com',
-//         From : document.getElementById("form-email").value,
-//         Subject : "Portfolio Contact Enquiry",
-//         Body : "Name: " + document.getElementById("form-name").value
-//         + "<br> Email " + document.getElementById('form-message')
-//     }).then(
-//       message => alert("Message Sent! We'll get back to you soon")
-//     );
-// }
+
+// -------mobile nav close---------
+const navLinks = document.querySelectorAll('.nav-link')
+const menuToggle = document.getElementById('offcanvasDarkNavbar')
+const bsCollapse = new bootstrap.Collapse(menuToggle, {
+  toggle: false
+})
+navLinks.forEach((l) => {
+    l.addEventListener('click', () => {
+        if(bsCollapse._isShown()){
+            bsCollapse.hide()
+        }
+    })
+})
