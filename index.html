@@ -150,15 +150,15 @@
           <div class='project-container'>
             <div class="img-wrap">
               <a href="https://evening-everglades-03167.herokuapp.com/" target="_blank"><img
-                  src='./assets/images/jate.png' alt="jate text editor" width="150" height="100" id="jate"></img></a>
+                  src='./assets/images/jate.png' alt="codepad text editor" width="150" height="100" id="jate"></img></a>
             </div>
             <div class='descr-container'>
               <div>
-                <a href="https://evening-everglades-03167.herokuapp.com/" target="_blank">
+                <a href="https://codepadtxt-1d14f4396365.herokuapp.com/" target="_blank">
                   <h3>CodePad</h3>
                 </a>
 
-                <a href="https://evening-everglades-03167.herokuapp.com/" target="_blank">
+                <a href="https://codepadtxt-1d14f4396365.herokuapp.com/" target="_blank">
                   <p>A progressive web app that utilizes the browser’s indexedDB to store and save user input. Built
                     with Babel & Express Webpack.</p>
                 </a>
@@ -220,7 +220,7 @@
               </a>
               <div class="tech-div">
                 <p>Javascript</p>
-                <p>Web API</p>
+                <p>API</p>
                 <p>jQuery</p>
 
               </div>
@@ -237,12 +237,12 @@
 
 
 
-      <form onsubmit="sendEmail(); reset(); return false;">
+      <form method="post" action="contact-form.php">
         <h3>Let's get in touch</h3>
-        <input id="form-name" type='text' placeholder='Name'></input>
-        <input id="form-email" type='email' placeholder='Email'></input>
-        <textarea id="form-message" type='text' placeholder='What&#39;s up?'></textarea>
-        <button>Send</button>
+        <input id="Name" name="Name" type='text' placeholder='Name' required></input>
+        <input id="Email" name="Email" type='email' placeholder='Email' required></input>
+        <textarea id="Message" name="Message" type='text' placeholder='What&#39;s up?' required></textarea>
+        <button type="submit">Send</button>
       </form>
 
 
