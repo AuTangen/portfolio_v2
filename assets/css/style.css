@@ -430,12 +430,12 @@ form button:hover {
   }
 
   .mobilenav-title {
-    background-color: var(--accent-color);
+    background-color: var(--back-color);
   }
 
   .mobilenav-menu {
 
-    background-image: linear-gradient( var(--accent-color), var(--back-color));
+    background-image: linear-gradient(var(--back-color), var(--accent-color));
   }
 
   #mobilenavbody ul li a {
