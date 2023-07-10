@@ -1,6 +1,8 @@
 :root {
-  --text-color: rgb(58, 58, 58);
-  --back-color: rgb(39, 54, 59);
+  --accent-color: #36458a;
+  --back-color: #0c0f17;
+  --gradient-start: #7992fc;
+  --gradient-end: #9e86f6;
 }
 
 * {
@@ -16,7 +18,7 @@ body {
   font-weight: 600;
   font-style: normal;
   background-color: var(--back-color);
-  color: white;
+  color: #f4f4f6;
 
 
 }
@@ -44,7 +46,7 @@ body {
   font-weight: 900;
   font-size: 350%;
   font-style: normal;
-  color: rgb(94, 126, 138);
+  color: #7992fc;
 }
 
 .line1 {
@@ -96,7 +98,7 @@ font-size: 110%;
 }
 
 a {
-  color: white;
+  color: #f4f4f6;
   text-decoration: none;
   
 }
@@ -106,7 +108,7 @@ a {
 }
 
 i {
-  color: white;
+  color: #f4f4f6;
 }
 
 
@@ -138,7 +140,8 @@ i {
   background-color: darkslategrey;
   mix-blend-mode:screen;
   position: relative;
-  border:solid rgb(94, 126, 138) 5px;
+  /* border:solid var(--accent-color) 5px; */
+  
   margin-bottom: 5%;
 }
 
@@ -177,7 +180,7 @@ font-style: italic;
 
 .proficiencies ul li::before {
   content: "\2023";
-  color:rgb(161, 216, 189);
+  color:var(--accent-color);
   font-weight: bold; 
   display: inline-block;
   width: 1em;
@@ -186,10 +189,11 @@ font-style: italic;
 
 #resume {
   margin-bottom: 5%;
+  color: var(--gradient-start);
 }
 
 #resume:hover {
-  color: rgb(94, 126, 138);
+  /* color: rgb(94, 126, 138); */
 }
 
 #resume-arrow {
@@ -208,10 +212,12 @@ font-style: italic;
 
 .project-wrap {
   border-radius: 7px;
+  
 }
 
 .project-wrap:hover {
-  background-color: rgb(66, 89, 97);
+  background-color: #1b2344;
+  
 }
 
 .project-container:last-child {
@@ -256,8 +262,8 @@ font-style: italic;
 
 .tech-div p {
  font-size: 80%;
- background-color:darkslategrey;
- color:gold;
+ background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+ color: #f4f4f6;
  border-radius: 16px;
  margin-right: 2%;
  padding: 1.5% 4%;
@@ -266,15 +272,21 @@ font-style: italic;
 
 .code {
 width: fit-content;
-background-color:rgb(192, 106, 0);
- color:rgb(255, 255, 255);
+background-image: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+color: #f4f4f6;
  border-radius: 8px;
  margin-right: 2%;
- padding: 2% 4%;
+ margin-top: 5%;
+
+}
+
+.code a {
+  padding: 5%;
 }
 
 .code:hover {
-  background-color:var(--back-color) ;
+  background-image: none;
+  background-color:var(--accent-color) ;
 }
 
 
@@ -290,7 +302,7 @@ background-color:rgb(192, 106, 0);
 }
 
 .active {
-  color:rgb(94, 126, 138);
+  color:var(--gradient-start);
   font-weight: 600;
 }
 
@@ -320,18 +332,44 @@ form textarea {
 }
 
 form button {
-  background-color: rgb(94, 126, 138);
-  color: white;
+  background-color: var(--gradient-start);
+  color: #f4f4f6;
   border: none;
   font-size: 1rem;
   border-radius: 5px;
 }
 
 form button:hover {
-  background-color:darkslategrey;
+  background-color:var(--accent-color);
   cursor: pointer;
 }
 
+.nav-item {
+  font-size: larger;
+}
+
+.nav-item a:hover {
+  color: #7992fc;
+}
+
+/* #codepad {
+  background-image: url("../images/codepad_bkg.png") ;
+  background-blend-mode:multiply;
+}
+
+
+#brewtools {
+  background-image: url("../images/brewtools_bkg.png") ;
+}
+
+#brewtools:hover {
+  background-blend-mode: overlay;
+}
+
+#codepad:hover {
+  background-blend-mode: overlay;
+
+} */
 
 
 @media screen and (max-width: 960px) {
@@ -369,7 +407,7 @@ form button:hover {
 
   #menu-btn {
 
-    background-color:rgb(94, 126, 138) !important;
+    background-color:var(--gradient-start) !important;
     color: var(--text-color) !important;
     opacity: 70%;
    
@@ -391,13 +429,17 @@ form button:hover {
     margin-top: 5%;
   }
 
-  #mobilenavbody {
+  .mobilenav-title {
+    background-color: var(--accent-color);
+  }
 
-    background-color: rgb(66, 89, 97);
+  .mobilenav-menu {
+
+    background-image: linear-gradient( var(--accent-color), var(--back-color));
   }
 
   #mobilenavbody ul li a {
-    color:white;
+    color: #f4f4f6;
     font-family: "lato", sans-serif;
 font-weight: 400;
 font-style: normal;
