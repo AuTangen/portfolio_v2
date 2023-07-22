@@ -220,6 +220,18 @@ font-style: italic;
   
 }
 
+/* .project-container:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.project-container:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.project-container:nth-child(3) {
+  transition-delay: 600ms;
+} */
+
 .project-container:last-child {
   margin-bottom: 20%;
 }
@@ -305,6 +317,17 @@ color: #f4f4f6;
   color:var(--gradient-start);
   font-weight: 600;
 }
+
+.hidden {
+  /* display: none; */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
 
 #contact-title {
   margin-bottom: 15%;
