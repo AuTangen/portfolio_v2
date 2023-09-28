@@ -140,6 +140,13 @@ font-style: normal;
     font-weight: 700;
     font-style: normal;
   }
+  h6 {
+    font-family: "darkmode-off", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+
   .icons {
    border-radius: 5px;
    box-shadow: 0 0 5px rgba(0,0,0,.2);
@@ -238,6 +245,10 @@ font-weight: 900;
 font-style: italic;
 }
 
+#resume {
+  margin-bottom: 10%;
+}
+
 
 /* SLIDER STYLING */
 
@@ -250,7 +261,7 @@ font-style: italic;
     
     .slide{
     width:100%;
-    
+   
     display:none;
     animation-name:fade;
     animation-duration:1s;
@@ -263,6 +274,7 @@ font-style: italic;
         height: auto;
         overflow: hidden;
         width:20rem;
+        
     }
     @keyframes fade{
     from{opacity:0.5;}
@@ -510,9 +522,31 @@ margin-bottom: 2%;
 
   @media screen and (max-width: 555px) {
 
+    .wrapper {
+     width: 100%;
+    }
+
+    .slide img {
+      width: 15rem;
+    }
+
 .tech-icons {
   display: none;
 }
 
+.column-text {
+  width: 15rem;
+}
+
+
+  }
+
+  @media screen and (max-width: 410px) {
+.mobile-hidden {
+ background-color: aqua;
+}
+
+    
+  
 
   }
