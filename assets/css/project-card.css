@@ -88,6 +88,10 @@
     border-radius: 16px;
 
   }
+
+  .proj-card__head:hover {
+    cursor: pointer;
+  }
   
   .proj-card .card__background--layer {
     z-index: 0;
