@@ -1,0 +1,254 @@
+
+:root {
+  --primary-font: #2c2f31;
+  --secondary-font: #F3A847;
+  /* #FFDE72 */
+  --background-light: #c3fdcb;
+  --border-light: #e2e2e2;
+  --border-dark: rgb(17, 17, 17);
+ 
+}
+
+
+
+
+  /*  */
+
+  .card__background--main {
+   background-position: bottom;
+
+  }
+
+
+  .card__background--wrapper {
+    border-radius: 16px;
+
+   
+
+  }
+
+
+  .date__box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    border: 4px solid;
+    font-weight: bold;
+    padding: 5px 10px;
+  }
+  
+  .date__box .date__day {
+    font-size: 22px;
+  }
+  
+  .proj-card {
+    padding: 30px;
+    position: relative;
+  }
+  
+  .proj-card .date__box {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: 300ms ease-in-out;
+  }
+  
+  .proj-card .proj-card__background,
+  .proj-card .card__background--layer {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .proj-card .proj-card__background {
+    padding: 15px;
+    background: white;
+
+  }
+  
+  .proj-card .card__background--wrapper {
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .proj-card .card__background--main {
+    height: 100%;
+    position: relative;
+    transition: 300ms ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+
+  }
+  
+  .proj-card .card__background--layer {
+    z-index: 0;
+    opacity: 0;
+    background: rgba(51, 51, 51, 0.9);
+    transition: 300ms ease-in-out;
+    
+  }
+  
+  .proj-card .proj-card__head {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .proj-card .proj-card__info {
+    z-index: 10;
+    background: white;
+    padding: 20px 15px;
+  }
+  
+  .proj-card .proj-card__info h5 {
+    transition: 300ms ease-in-out;
+  }
+  
+  .proj-card:hover .date__box {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .proj-card:hover .card__background--main {
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+  .proj-card:hover .card__background--layer {
+    opacity: 1;
+  }
+  
+ 
+
+  .proj-card:hover .projcard-bar {
+    width: 100px;
+  }
+
+  .projcard-bar {
+    left: -2px;
+    width: 50px;
+    height: 5px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .projcard-blue .projcard-bar { background-color: #ffb535; }
+  .projcard-blue::before { background-image: linear-gradient(-70deg, #ffb535, transparent 50%); }
+  .projcard-blue:nth-child(2n)::before { background-image: linear-gradient(-250deg, #ffb535, transparent 50%); }
+  
+
+
+  .projcard-tagbox {
+    /* position: absolute; */
+    bottom: 3%;
+    font-size: 14px;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+  }
+  .projcard-tag {
+    display: inline-block;
+    background: var(--background-light);
+    color: var(--primary-font);
+    border-radius: 3px 0 0 3px;
+    line-height: 26px;
+    padding: 0 10px 0 23px;
+    position: relative;
+    margin-right: 20px;
+    cursor: default;
+    user-select: none;
+    transition: color 0.2s;
+  }
+  .projcard-tag::before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+    height: 6px;
+    left: 10px;
+    width: 6px;
+    top: 10px;
+  }
+  .projcard-tag::after {
+    content: '';
+    position: absolute;
+    border-bottom: 13px solid transparent;
+    border-left: 10px solid var(--background-light);
+    border-top: 13px solid transparent;
+    right: -10px;
+    top: 0;
+  }
+
+  a.icon-link {
+    color: #363738;
+    transition: 200ms ease-in-out;
+  }
+  
+  a.icon-link i {
+    color: #ffb535;
+  }
+  
+  a.icon-link:hover {
+    color: #ffb535;
+    text-decoration: none;
+  }
+  
+  .btn {
+    background: white;
+    color: #363738;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border-radius: 0;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    padding: 0;
+    border: none;
+  }
+  
+  .btn:focus {
+    box-shadow: none;
+  }
+  
+  .btn:hover {
+    background: #ffb535;
+    color: #fff;
+  }
+  
+  .btn.btn--with-icon {
+    padding-right: 20px;
+  }
+  
+  .btn.btn--with-icon i {
+    padding: 0px 30px 0px 15px;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: bottom;
+    color: white;
+    background: #ffb535;
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+  }
+  
+  .btn.btn--only-icon {
+    width: 50px;
+  }
+
+  .proj-tag-btns {
+    display: flex;
+    justify-content: space-around;
+  }
