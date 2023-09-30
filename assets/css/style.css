@@ -148,8 +148,8 @@ font-style: normal;
 
 
   .icons {
-   border-radius: 5px;
-   box-shadow: 0 0 5px rgba(0,0,0,.2);
+   /* border-radius: 5px;
+   box-shadow: 0 0 5px rgba(0,0,0,.2); */
 font-size: 50px;
 
   }
@@ -320,8 +320,9 @@ margin-bottom: 2%;
     display: block;
     text-align: center;
     transition: 0.15s ease;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    padding: 0 5%;
+    /* border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.15); */
   }
   
   .wrapper.active .arrow {
@@ -522,6 +523,14 @@ margin-bottom: 2%;
 
   @media screen and (max-width: 555px) {
 
+    header {
+      gap: 1rem;
+    }
+
+
+    .header-img {
+      width: 8rem;
+    }
     .wrapper {
      width: 100%;
     }
