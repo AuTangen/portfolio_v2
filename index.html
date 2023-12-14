@@ -627,13 +627,15 @@
             <div class="contact-container">
                 <h4>Got an idea?</h4>
                 <h2>Let's make it happen</h2>
-                <form class="contact-form" method="post" action="contact-form-process.php">
+                <form class="contact-form" method="post" action="send_email.php">
                     <div class="input-container">
-                        <input type="text" placeholder="name" id="Name" name="Name" required>
-                        <input type="email" placeholder="email" id="Email" name="Email">
+                        <input type="text" placeholder="name" id="Name" name="name" required>
+                        <input type="email" placeholder="email" id="Email" name="email">
 
-                        <input type="text" placeholder="what's up?" id="Message" name="Message" maxlength="3000">
-                        <button>Submit</button>
+                        <input type="text" placeholder="what's up?" id="Message" name="message" maxlength="3000">
+
+                        <input type="submit" value="Send">
+                        <!-- <button>Submit</button> -->
                     </div>
 
 
